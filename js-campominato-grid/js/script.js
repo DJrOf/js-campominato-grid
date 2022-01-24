@@ -57,10 +57,9 @@ const generateCell = (number, cellsPerRow) => {
     const cell = document.createElement('div');
     cell.className = 'cell';
     cell.id = number;
-    const sideLength = 'cell( 100% / ${cellsPerRow} )';
+    const sideLength = `cell( 100% / ${cellsPerRow} )`;
     cell.style.width = sideLength;
     cell.style.height = sideLength;
-
     return cell;
 };
 
@@ -72,7 +71,8 @@ const gameOver = (bombs, points, hasLost) => {
 
     const messageElement = document.createElement('h3');
     messageElement.className = 'message';
-    const messageText = hasLost ? "Peccato, hai perso! Punti: ${points} ";
+    const messageText = hasLost ? `Pai perso! Punti: ${points}`:
+    `Hai vinto! Punti: ${points}`
 };
 
 //Click - Evento
@@ -99,7 +99,7 @@ const showBombs = (bombs) => {
     for (let i = 0; i < cells.length; i++) {
     const cell = cells[i];
     const cellNumber = parseInt(cell.innerText);
-    cell.removeEventListener)'click', oneCellClick);
+    cell.removeEventListener ('click', oneCellClick);
     if (bombs.includes(cellNumber)) cell.classical.add('bomb');
     }
 };
@@ -118,6 +118,9 @@ const generateGrid = (cellsNumber, cellsPerRow, bombs) => {
 
 
 generateGrid(totalCells, cellsPerRow, bombs);
+
+// Play button funzione 
+
 
 const playbutton = document.getElementById('play');
 playButton.addEventListener('click', play);
