@@ -9,7 +9,7 @@ Quando l'utente clicca su ogni cella,
 la cella cliccata si colora di azzurro. */ 
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-
+// Bomb's number generator
 
 const play = () => {
     playButton.innerText = 'Ricomincia';
