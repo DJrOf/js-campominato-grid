@@ -93,7 +93,7 @@ const onCellClick = (clickedCell, bombs, number) => {
     if (bombs.includes(number)) {
         gameOver(bombs, attempts, true);
     } else {
-        clickedCell.classList.add('safe');
+        clickedCell.classList.add('clicked');
         attempts++;
 
         if (attempts === MAX_ATTEMPTS)
