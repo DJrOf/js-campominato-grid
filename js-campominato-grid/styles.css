@@ -45,7 +45,7 @@ body {
 }
 .cell.safe {
     cursor: not-allowed;
-    background-color: green;
+    background-color: lightblue;
     color: white;
 }
 
